@@ -66,6 +66,10 @@
         width: 100%;
     }
 
+    .hero .hero_title h2 {
+        font-size: 30px;
+    }
+
     /*================================== 
             Hero End
     ====================================*/
@@ -74,6 +78,10 @@
     /*================================== 
             About Start
     ====================================*/
+
+    .about {
+        height: 150vh;
+    }
 
     .about .about_content .info {
         flex-direction: column;
@@ -100,11 +108,45 @@
     /*================================== 
             About End
     ====================================*/
+
+
+
+    /*================================== 
+            Services Start
+    ====================================*/
+
+    .services {
+        padding: 0;
+    }
+
+    .services .services_content .cards .card {
+        width: calc(50% - 10px);
+        margin: 5px 2px;
+    }
+
+    .services .cards {
+        margin-top: 30px;
+    }
+
+    /*================================== 
+            Services End
+    ====================================*/
+
+
 }
+
+
+
 
 @media only screen and (max-width: 500px) {
     .about .about_content .info .image img {
         width: 90%;
         height: 300px;
+    }
+}
+
+@media only screen and (max-width: 650px) {
+    .services .services_content .cards .card {
+        width: 100%;
     }
 }
