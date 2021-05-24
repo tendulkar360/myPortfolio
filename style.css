@@ -29,13 +29,13 @@ body {
     color: white;
     background-color: rgba(219, 20, 60, 1);
     border-radius: 6px;
-    border: 2px solid;
+    border: 2px solid crimson;
     outline: none;
     cursor: pointer;
 }
 
 .btn:hover {
-    background: rgba(219, 20, 60, 0.1);
+    background: rgba(219, 20, 60, 0.2);
     color: crimson;
 }
 
@@ -57,17 +57,58 @@ h6 {
     font-family: 'Ubuntu', sans-serif;
 }
 
-/*================================== 
-            Navigation 
-====================================*/
 
-/* .max_width {
+.max_width {
     max-width: 90%;
     width: 100%;
     height: 30vh;
     margin: 0 auto;
-    background-color: purple;
-} */
+}
+
+section {
+    padding: 100px 0 40px 0;
+}
+
+.title {
+    text-align: center;
+    padding: 20px 0;
+    position: relative;
+}
+
+.title::before {
+    content: "";
+    position: absolute;
+    height: 3px;
+    width: 20px;
+    background: crimson;
+    bottom: 30px;
+    right: calc(50% - 90px);
+    animation: title_round 1.5s ease-in-out infinite;
+}
+
+.title::after {
+    content: "";
+    position: absolute;
+    height: 3px;
+    width: 20px;
+    background: crimson;
+    bottom: 30px;
+    left: calc(50% - 90px);
+    animation: title_round 1.5s ease-in-out infinite;
+    animation-direction: reverse;
+}
+
+.image {
+    padding: 20px;
+}
+
+.text {
+    padding: 10px;
+}
+
+/*================================== 
+            Navigation 
+====================================*/
 
 nav {
     position: fixed;
@@ -76,7 +117,7 @@ nav {
     width: 100%;
     background: #fff;
     z-index: 9999;
-    box-shadow: 0 1px 10px 0 rgba(0, 0, 0, 1);
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5);
 }
 
 .nav {
@@ -86,7 +127,7 @@ nav {
     width: 100%;
     max-width: 90%;
     margin: 0 auto;
-    padding: 20px;
+    padding: 20px 60px;
 }
 
 .nav h1 a {
@@ -142,3 +183,166 @@ nav {
     background-color: crimson;
     transform: scale(1.1);
 }
+
+
+/*================================== 
+            Navigation End
+====================================*/
+
+
+/*================================== 
+            Hero Start
+====================================*/
+
+.home {
+    height: 100vh;
+    background: url("images/banner.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    position: relative;
+}
+
+.hero {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    padding: 20px;
+}
+
+.hero_title h2,
+.hero_info p,
+.btn {
+    margin-bottom: 20px;
+}
+
+.hero_title h2 {
+    font-size: 35px;
+    font-family: 'Poppins', sans-serif;
+}
+
+.hero_title h2 span {
+    color: crimson;
+}
+
+.hero_info p {
+    color: white;
+    font-size: 20px;
+    margin: 40px 0;
+}
+
+.hero .btn {
+    animation: button_scaling 1s ease infinite;
+}
+
+/*================================== 
+            Hero End
+====================================*/
+
+/*================================== 
+            About Start
+====================================*/
+
+.about .about_content .info {
+    display: flex;
+    margin-top: 40px;
+    width: 100%;
+    overflow: hidden;
+}
+
+.about .about_content .info .image {
+    width: 40%;
+}
+
+.about .about_content .info .image img {
+    width: 290px;
+    height: 300px;
+    border-radius: 10px;
+    clear: both;
+    display: block;
+    margin: auto;
+}
+
+.about .about_content .info .text {
+    height: 100%;
+    margin: 20px 0 0 auto;
+    width: 60%;
+    clear: both;
+    display: block;
+}
+
+.about .about_content .info .text p {
+    text-align: justify;
+}
+
+.about .about_content .info .text p span {
+    font-weight: bold;
+    color: crimson;
+}
+
+/*================================== 
+            About End
+====================================*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*================================== 
+    Button Animation Start
+====================================*/
+
+@keyframes button_scaling {
+    0% {
+        transform: scale(1);
+    }
+
+    30% {
+        transform: scale(1.05);
+    }
+
+    60% {
+        transform: scale(1.1);
+    }
+
+    90% {
+        transform: scale(1.05);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+/*================================== 
+    Button Animation End
+====================================*/
+
+/*================================== 
+    Title Animation Start
+====================================*/
+
+@keyframes title_round {
+    from {
+        transform: rotateZ(0deg);
+    }
+
+    to {
+        transform: rotateZ(7200deg);
+    }
+}
+
+/*================================== 
+    Title Animation End
+====================================*/
