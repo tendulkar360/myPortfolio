@@ -18,8 +18,13 @@
     transition: all 0.2s ease;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     background-color: #CCC;
+    overflow-x: hidden;
 }
 
 .btn {
@@ -66,12 +71,14 @@ h6 {
 }
 
 section {
-    padding: 100px 0 40px 0;
+    width: 100vw;
+    height: 100vh;
+    padding: 40px 0;
 }
 
 .title {
     text-align: center;
-    padding: 20px 0;
+    padding-top: 100px;
     position: relative;
 }
 
@@ -81,7 +88,7 @@ section {
     height: 3px;
     width: 20px;
     background: crimson;
-    bottom: 30px;
+    bottom: 10px;
     right: calc(50% - 90px);
     animation: title_round 1.5s ease-in-out infinite;
 }
@@ -92,18 +99,10 @@ section {
     height: 3px;
     width: 20px;
     background: crimson;
-    bottom: 30px;
+    bottom: 10px;
     left: calc(50% - 90px);
     animation: title_round 1.5s ease-in-out infinite;
     animation-direction: reverse;
-}
-
-.image {
-    padding: 20px;
-}
-
-.text {
-    padding: 10px;
 }
 
 /*================================== 
@@ -285,6 +284,72 @@ nav {
 
 /*================================== 
             About End
+====================================*/
+
+
+/*================================== 
+            Services Start
+====================================*/
+
+
+.services .cards {
+    width: 100%;
+    margin: 120px auto 0 auto;
+    padding: 10px;
+    height: 100%;
+}
+
+.services .cards .card {
+    display: inline-block;
+    width: calc(25% - 10px);
+    margin: 0 auto;
+    text-align: center;
+    background-color: #222;
+    padding: 10px;
+    border: none;
+    border-radius: 6px;
+}
+
+.services .cards .card:hover {
+    background-color: #fff;
+    cursor: pointer;
+}
+
+.services .cards .card:hover .card_element {
+    transform: scale(1.05);
+}
+
+.services .cards .card:hover .text,
+.services .cards .card:hover i {
+    color: #111;
+}
+
+.services .cards .card .subtitle,
+.services .cards .card i,
+.services .cards .card .text {
+    padding: 10px 0;
+}
+
+.services .cards .card i {
+    font-size: 30px;
+    color: white;
+}
+
+.services .cards .card .sub_title {
+    font-size: 25px;
+    font-weight: 500;
+    color: crimson;
+}
+
+.services .cards .card .text {
+    font-size: 18px;
+    color: white;
+    text-align: justify;
+}
+
+
+/*================================== 
+            Services End
 ====================================*/
 
 
